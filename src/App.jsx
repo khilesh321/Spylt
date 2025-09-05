@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <ReactLenis root/>
+      <ReactLenis root />
       <Hero />
       <Message />
       <Flavor />
