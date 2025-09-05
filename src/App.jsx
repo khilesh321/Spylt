@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/all';
 import Message from './sections/Message';
 import ReactLenis from 'lenis/react';
 import Flavor from './sections/Flavor';
+import Nutrition from './sections/Nutrition';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <Message />
       <Flavor />
+      <Nutrition />
       <div className="min-h-screen border border-red-400"></div>
     </div>
   )
