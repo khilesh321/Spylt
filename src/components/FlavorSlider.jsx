@@ -12,17 +12,19 @@ function FlavorSlider() {
   useGSAP(() => {
     const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth + 1000;
 
-    gsap.to('.flavor-section', {
-      x: `-${scrollAmount}px`,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".flavor-section",
-        start: "top top",
-        pin: true,
-        end: `+=${scrollAmount}px`,
-        scrub: 1.25,
-      },
-    })
+    if(!isTablet){
+      gsap.to('.flavor-section', {
+        x: `-${scrollAmount}px`,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: ".flavor-section",
+          start: "top top",
+          pin: true,
+          end: `+=${scrollAmount}px`,
+          scrub: 1.25,
+        },
+      })
+    }
 
     const titleTl = gsap.timeline({
       scrollTrigger: {
