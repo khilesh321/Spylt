@@ -253,7 +253,7 @@ body::-webkit-scrollbar {
     }
 
     .prefooter-text-scroll {
-      @apply rotate-[3deg] bg-light-brown absolute top-60 md:top-55 z-10;
+      @apply rotate-[3deg] bg-light-brown absolute top-63 md:top-55 z-10;
     }
 
     .prefooter-button {

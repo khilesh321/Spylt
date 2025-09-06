@@ -36,8 +36,8 @@ function Footer() {
   return (
     <section className="footer-section">
       <div className="relative md:pt-[20vh] pt-[10vh]">
-        <div className="overflow-hidden z-10">
-          <h1 className="general-title xyz text-center text-milk py-5">
+        <div className="overflow-hidden z-10 relative">
+          <h1 className="general-title text-center text-milk py-5">
             #CHUGRESPONSIBLY
           </h1>
         </div>
@@ -45,7 +45,7 @@ function Footer() {
         {isMobile ? (
           <img
             src="/images/footer-drink.png"
-            className="absolute top-0 object-contain"
+            className="absolute top-0 z-0 object-contain"
           />
         ) : (
           <video
@@ -69,7 +69,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
+        <div className="mt-40 md:px-10 z-10 relative px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
           <div className="flex items-center md:gap-16 gap-5">
             <div>
               <p>SPYLT Flavors</p>
@@ -86,7 +86,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="md:max-w-lg">
+          <div className="md:max-w-lg z-10 relative">
             <p>
               Get Exclusive Early Access and Stay Informed About Product
               Updates, Events, and More!
@@ -102,7 +102,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="copyright-box">
+        <div className="copyright-box z-10 relative">
           <p>Copyright © 2025 Spylt - All Rights Reserved</p>
           <div className="flex items-center gap-7">
             <p>Privacy Policy</p>
