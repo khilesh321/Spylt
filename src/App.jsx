@@ -6,8 +6,8 @@ import Message from './sections/Message';
 import ReactLenis from 'lenis/react';
 import Flavor from './sections/Flavor';
 import Nutrition from './sections/Nutrition';
-import BenefitSection from './sections/Benefits';
 import Benefits from './sections/Benefits';
+import Testimonial from './sections/Testimonial';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +21,7 @@ function App() {
       <Flavor />
       <Nutrition />
       <Benefits />
+      <Testimonial />
       <div className="min-h-screen border border-red-400"></div>
     </div>
   )
