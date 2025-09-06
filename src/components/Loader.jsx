@@ -29,7 +29,7 @@ const Loader = ({ onLoaded }) => {
   }, [onLoaded]);
 
   return (
-    <div ref={loaderRef} className="fixed inset-0 z-50 bg-black flex items-center justify-center transition-opacity duration-1000 ease-in-out">
+    <div ref={loaderRef} className="fixed inset-0 z-60 bg-black flex items-center justify-center transition-opacity duration-1000 ease-in-out">
       <video
         ref={videoRef}
         autoPlay
