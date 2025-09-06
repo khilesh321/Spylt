@@ -9,6 +9,7 @@ import Nutrition from './sections/Nutrition';
 import Benefits from './sections/Benefits';
 import Testimonial from './sections/Testimonial';
 import Footer from './sections/Footer';
+import PreFooter from './sections/PreFooter';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,7 @@ function App() {
       <Nutrition />
       <Benefits />
       <Testimonial />
+      <PreFooter />
       <Footer />
       {/* <div className="min-h-screen border border-red-400"></div> */}
     </div>
