@@ -1,22 +1,35 @@
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { ScrollTrigger } from "gsap/all";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 
 function Footer() {
   const isMobile = useMediaQuery({maxWidth: 768});
   const videoRef = useRef(null);
 
   useGSAP(() => {
-    ScrollTrigger.create({
-      trigger: ".footer-section",
-      start: "top center",
-      onEnter: () => {
-        if (videoRef.current && !isMobile) {
-          videoRef.current.play();
+
+    const splitTitle = SplitText.create('.footer-section .general-title', { type: 'chars' });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".footer-section",
+        start: "top center",
+        toggleActions: "restart none restart none",
+        onEnter: () => {
+          if (videoRef.current && !isMobile) {
+            videoRef.current.play();
+          }
         }
-      },
-      // once: true,
+      }
+    });
+
+    tl.from(splitTitle.chars, {
+      yPercent: 150,
+      stagger: 0.02,
+      ease: 'power2.inOut',
+      delay: 1
     });
   });
 
@@ -30,7 +43,7 @@ function Footer() {
 
       <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
         <div className="overflow-hidden z-10">
-          <h1 className="general-title text-center text-milk py-5">
+          <h1 className="general-title xyz text-center text-milk py-5">
             #CHUGRESPONSIBLY
           </h1>
         </div>
