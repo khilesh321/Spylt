@@ -37,7 +37,7 @@ const NutritionSection = () => {
     });
     contentTl
       .from(titleSplit.chars, {
-        yPercent: 100,
+        yPercent: 200,
         stagger: 0.02,
         ease: "power2.out",
       })

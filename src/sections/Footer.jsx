@@ -26,7 +26,7 @@ function Footer() {
     });
 
     tl.from(splitTitle.chars, {
-      yPercent: 150,
+      yPercent: 200,
       stagger: 0.02,
       ease: 'power2.inOut',
       delay: 1
