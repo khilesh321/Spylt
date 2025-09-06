@@ -10,12 +10,31 @@ import Benefits from './sections/Benefits';
 import Testimonial from './sections/Testimonial';
 import Footer from './sections/Footer';
 import PreFooter from './sections/PreFooter';
+import Loader from './components/Loader';
+import { useState, useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoaderComplete = () => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
+      {isLoading && <Loader onLoaded={handleLoaderComplete} />}
       <Navbar />
       <ReactLenis root />
       <Hero />

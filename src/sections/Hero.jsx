@@ -2,15 +2,27 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap";
 import { SplitText } from "gsap/all"
 import { useMediaQuery } from "react-responsive";
+import { useRef, useEffect } from "react";
 
 function Hero() {
 
   const isMobile = useMediaQuery({maxWidth: 768});
   const isTablet = useMediaQuery({minWidth: 769, maxWidth: 1024});
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (videoRef.current && !isMobile && !isTablet) {
+        videoRef.current.play();
+      }
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [isMobile, isTablet]);
 
   useGSAP(() => {
     const titleSplit = SplitText.create('.hero-title',{type: 'chars'});
-    const tl = gsap.timeline({delay: 1});
+    const tl = gsap.timeline({delay: 4.5});
     tl.from('.hero-content', {
       y: 100,
       opacity: 0,
@@ -66,8 +78,8 @@ function Hero() {
             />
           ) : (
             <video
+              ref={videoRef}
               src="/videos/hero-bg.mp4"
-              autoPlay
               muted
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
