@@ -30,7 +30,9 @@ const NutritionSection = () => {
     const contentTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".nutrition-section",
-        start: "top center",
+        start: "top 20%",
+        end: '30% center',
+        toggleActions: "play none none reverse",
       },
     });
     contentTl
@@ -50,7 +52,9 @@ const NutritionSection = () => {
     const titleTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".nutrition-section",
-        start: "top 80%",
+        start: "top 20%",
+        end: '30% center',
+        toggleActions: "play none none reverse",
       },
     });
 

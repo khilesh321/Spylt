@@ -10,8 +10,9 @@ const Benefits = () => {
       scrollTrigger: {
         trigger: ".benefit-section",
         start: "top 60%",
-        end: "top top",
+        end: "30% center",
         scrub: 1.5,
+        toggleActions: "play none none reverse",
       },
     });
 

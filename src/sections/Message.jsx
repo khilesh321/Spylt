@@ -36,6 +36,7 @@ function Message() {
       scrollTrigger: {
         trigger: '.msg-text-scroll',
         start: 'top center',
+        toggleActions: 'play none none reverse',
       }
     })
 
@@ -49,6 +50,7 @@ function Message() {
       scrollTrigger: {
         trigger: '.message-content p',
         start: 'top center',
+        toggleActions: 'play none none reverse',
       }
     })
 

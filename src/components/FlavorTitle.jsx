@@ -14,6 +14,7 @@ function FlavorTitle() {
       scrollTrigger: {
         trigger: '.flavor-section',
         start: 'top 30%',
+        toggleActions: 'play none none reverse',
       },
     });
 
@@ -23,6 +24,7 @@ function FlavorTitle() {
       scrollTrigger: {
         trigger: '.flavor-section',
         start: 'top 10%',
+        toggleActions: 'play none none reverse',
       }
     })
 
@@ -34,6 +36,7 @@ function FlavorTitle() {
       scrollTrigger: {
         trigger: '.flavor-section',
         start: 'top 1%',
+        toggleActions: 'play none none reverse',
       },
     });
   })

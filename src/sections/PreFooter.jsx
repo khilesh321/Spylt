@@ -8,7 +8,8 @@ function PreFooter() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".prefooter-section",
-        start: '40% bottom',
+        start: '40% center',
+        toggleActions: "play none none reverse",
       }
     });
 

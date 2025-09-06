@@ -16,7 +16,7 @@ function Footer() {
       scrollTrigger: {
         trigger: ".footer-section",
         start: "top center",
-        toggleActions: "restart none restart none",
+        toggleActions: "play none none reverse",
         onEnter: () => {
           if (videoRef.current && !isMobile) {
             videoRef.current.play();
