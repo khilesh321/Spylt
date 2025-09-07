@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
-import { ScrollSmoother, ScrollTrigger } from 'gsap/all';
+import { ScrollSmoother, ScrollTrigger, SplitText } from 'gsap/all';
 import Message from './sections/Message';
 import Flavor from './sections/Flavor';
 import Nutrition from './sections/Nutrition';
@@ -13,7 +13,7 @@ import Loader from './components/Loader';
 import { useState, useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, ScrollSmoother);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
