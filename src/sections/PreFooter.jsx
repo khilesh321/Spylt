@@ -36,7 +36,7 @@ function PreFooter() {
       <div className="h-[85vh] sm:pl-10 md:pl-20" style={{backgroundImage: "url('/images/preFooter.png')"}}>
         <div className="relative flex justify-center items-center sm:items-start flex-col h-full text-center sm:text-left text-milk">
           <div className="overflow-hidden">
-            <h1 className="prefooter-title mt-10">Right Around</h1>
+            <h1 className="prefooter-title sm:mt-10 mb-30">Right Around</h1>
           </div>
           <div style={{clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}} className="prefooter-text-scroll">
             <h1>The Corner</h1>
